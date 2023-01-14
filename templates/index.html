@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container"> 
+<body style="background-color: #fefaea;">
+    <style>
+        #card:hover {
+          opacity: 0.6;
+        }
+    </style>
+
+    <div class="row align-items-center justify-content-center">
+
+        <div class="col-2">
+
+            <a href="" class=" text-dark">
+            <div class="card rounded w-auto shadow-sm" style="background-color: #E3CAA5;" id="card">
+                <img src="https://picsum.photos/600/400" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="text-center">Pesquise sua origem</h5>
+                    <p class="text-center">Até MIL gerações</p>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-4">
+
+            <a href="" class=" text-dark">
+            <div class="card text-end mb-4 shadow-sm " style="background-color: #E3CAA5;" id="card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="https://picsum.photos/300/350" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Serviços</h5>
+                      <p class="card-text">Algum serviço</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </a>
+
+            <a href="" class=" text-dark">
+            <div class="card text-end mb-1 shadow-sm " style="background-color: #E3CAA5;" id="card">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Quem Somos</h5>
+                            <p class="card-text">Especialistas</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://picsum.photos/300/350" class="img-fluid rounded-start" alt="...">
+                    </div>
+                </div>
+            </div>
+            </a>
+
+        </div>
+
+        <div class="col-2">
+
+            <a href="" class=" text-dark">
+            <div class="card rounded w-auto shadow-sm" style="background-color: #E3CAA5;" id="card">
+                <div class="card-body">
+                    <h5 class="text-center">Fale conosco</h5>
+                    <p class="text-center">Entre em Contato</p>
+                </div>
+                <img src="https://picsum.photos/600/400" class="card-img-bottom" alt="...">
+            </div>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</div>
+{% endblock %}
