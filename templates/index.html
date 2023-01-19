@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    
+    {% include 'partials/_header.html' %}
 
 <div class="container"> 
-<body style="background-color: #fefaea;">
+<body>
     <style>
         #card:hover {
           opacity: 0.6;
@@ -14,8 +16,8 @@
 
         <div class="col-2">
 
-            <a href="" class=" text-dark">
-            <div class="card rounded w-auto shadow-sm" style="background-color: #E3CAA5;" id="card">
+            <a href="{% url 'busca' %}" class=" text-dark">
+            <div class="card rounded w-auto shadow" style="background-color: #EDE4E0;" id="card">
                 <img src="https://picsum.photos/600/400" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="text-center">Pesquise sua origem</h5>
@@ -27,8 +29,8 @@
 
         <div class="col-4">
 
-            <a href="" class=" text-dark">
-            <div class="card text-end mb-4 shadow-sm " style="background-color: #E3CAA5;" id="card">
+            <a href="{% url 'servicos' %}" class=" text-dark">
+            <div class="card text-end mb-4 shadow " style="background-color: #EDE4E0;" id="card">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img src="https://picsum.photos/300/350" class="img-fluid rounded-start" alt="...">
@@ -43,8 +45,8 @@
             </div>
             </a>
 
-            <a href="" class=" text-dark">
-            <div class="card text-end mb-1 shadow-sm " style="background-color: #E3CAA5;" id="card">
+            <a href="{% url 'sobre' %}" class=" text-dark">
+            <div class="card text-end mb-1 shadow " style="background-color: #EDE4E0;" id="card">
                 <div class="row g-0">
                     <div class="col-md-8">
                         <div class="card-body">
@@ -63,8 +65,8 @@
 
         <div class="col-2">
 
-            <a href="" class=" text-dark">
-            <div class="card rounded w-auto shadow-sm" style="background-color: #E3CAA5;" id="card">
+            <a href="{% url 'contato' %}" class=" text-dark">
+            <div class="card rounded w-auto shadow" style="background-color: #EDE4E0;" id="card">
                 <div class="card-body">
                     <h5 class="text-center">Fale conosco</h5>
                     <p class="text-center">Entre em Contato</p>
@@ -78,4 +80,6 @@
 
 </body>
 </div>
+
+    {% include 'partials/_footer.html' %}
 {% endblock %}

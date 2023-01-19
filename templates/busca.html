@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'partials/_header.html' %}
+    <div>
+        <h2 class="container text-muted text-center"> Pesquise sua origem</h2>
+    </div>
+
+    <div class="container border-bottom border-top pb-3 pt-3">
+    <form class="d-flex" role="search" action="{% url 'busca' %}" method="GET">
+        <input class="form-control me-2" name="buscar" placeholder="Insira seu sobrenome">
+        <button class="btn btn-secondary" type="submit">Pesquisar</button>
+      </form>
+    </div>
+    {% if pessoas %}
+    <div>
+        {{pessoas}}
+    </div>
+    {% endif %}
+
+
+    <!-- Total de resultados: 3
+    Caso não encontre o teu antepassado, solicite uma busca avançada clicando aqui. -->
+
+    {% include 'partials/_footer.html' %}
+
+{% endblock %}

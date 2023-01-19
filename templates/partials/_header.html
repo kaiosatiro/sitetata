@@ -1,22 +1,21 @@
 {% load static %}
-<div class="container rounded shadow-sm" style="background-color: #CEAB93;">
+<div class="container rounded shadow" style="background-color: #9F8772;">
     <style>
         .fs-4{
             font-size:calc(1.3rem + .4vw)
         }
         .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
             color: #fff;
-            background-color: #AD8B73;
+            background-color: #665A48;
         }
     </style>
     <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <span class="fs-4">Imigração</span>
       <ul class="nav nav-pills ">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-dark">Serviços</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-dark">Pesquisa</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-dark">Sobre</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link text-dark {% if 'index' in segmento %} active {% endif %}">Home</a></li>
+        <li class="nav-item"><a href="{% url 'servicos' %}" class="nav-link text-dark {% if 'servicos' in segmento %} active {% endif %}">Serviços</a></li>
+        <li class="nav-item"><a href="{% url 'contato' %}" class="nav-link text-dark {% if 'contato' in segmento %} active {% endif %}">Fale Conosco</a></li>
       </ul>
     </header>
 </div>

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% include 'partials/_header.html' %}
+
+    <div class="container">
+          <div class="py-2 text-center">
+           <h3>Entre em contato</h3>
+            <p class="lead text muted">Caso não tenha encontrado seu nome ou tenha dúvidas nos envie uma mensagem.</p>
+            </div>
+            {% include 'partials/_alertas.html' %}
+              <form class="needs-validation" action="{% url 'contato' %}" method="POST">
+                {% csrf_token %}
+                <div class="row justify-content-center">
+                  <div class="col-7 ">
+                    <label for="nome" class="form-label "></label>
+                    <input type="text" class="form-control shadow-sm" name="nome" placeholder="Nome" required>
+                  </div>
+      
+                  <div class="col-7">
+                    <label for="email" class="form-label"><span class="text-muted"></span></label>
+                    <input type="email" class="form-control shadow-sm" name="email" placeholder="Email" required>
+                  </div> 
+      
+                  <div class="col-7">
+                    <label for="assunto" class="form-label"></label>
+                    <input type="text" class="form-control shadow-sm" name="assunto" placeholder="Assunto" required>
+                  </div>
+
+                  <div class="col-7">
+                    <label for="mensagem" class="form-label"></label>
+                    <textarea type="text" rows="6" class="form-control shadow-sm" name="mensagem" placeholder="Mensagem" required></textarea>
+                  </div>
+                </div>   
+
+                <div class="pb-3 pt-3 text-center">
+                <button class="w-50 btn btn-secondary btn-lg" type="submit">Pesquisar</button>
+                </div>
+            </form>
+    </div>
+
+
+
+
+    {% include 'partials/_footer.html' %}
+
+{% endblock %}
