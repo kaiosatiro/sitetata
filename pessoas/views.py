@@ -12,12 +12,17 @@ def index(request):
 
 def busca(request):
     if 'buscar' in request.GET:
-        nome_a_buscar = request.GET['buscar']
+        nome_a_buscar = request.GET['buscar'].strip()
+        if nome_a_buscar == '':
+            return redirect('busca')
+
         lista = Pessoa.objects.filter(nome__icontains=nome_a_buscar).order_by('-nome')
 
         contexto = {
         'segmento': 'busca',
-        'pessoas': lista
+        'pessoas': lista,
+        'total': lista.count(),
+        'indice': 1
         }
         return render(request, 'busca.html', contexto)
 
